@@ -1,0 +1,99 @@
+.header{
+	text-align: center;
+	padding: 20px;
+
+}
+.header h1 {
+	background: #f4f4f4;
+	padding: 10px;
+	color: #48009CFF;
+}
+.formSearch {
+	padding-left: 50px;
+}
+.formSearch .form-group {
+	margin-left: 50px;
+	display: inline-block;
+	float:left;
+}
+.formSearch .form-group input {
+	border-radius: 25px 0 0 25px;
+}
+.formSearch form button {
+	display: inline-block;
+	float: left;
+	border-radius: 0  25px 25px 0;
+}
+.formChange {
+	
+
+}
+.formChange .form-group input {
+	width: 80%;
+	margin-bottom: 20px;
+
+}
+.formChange .form-group #newName {
+	
+}
+.formChange button {
+	display: none;
+}
+.table {
+	border-left: 2px solid #000;
+
+}
+
+.table ul {
+	/*border-left: 2px solid #0026FFFF;*/
+	margin-top: 25px;
+	list-style: none;
+}
+.table ul button {
+	border: none;
+	background: none;
+	/*transform: rotate(90deg); */
+
+
+}
+.table ul li {
+	margin-top: 10px;
+}
+.table ul li a {
+
+	cursor: pointer;
+	color: #0020FFFF !important;
+}
+.table ul li a:hover {
+	background: #0020FFFF !important;
+	color: #fff !important;
+}
+.table ul li i {
+	color: #808080FF !important;
+	margin-right: 5px;
+}
+
+.scrollbar {
+	float: left;
+	height: 700px;
+	width: 300px;
+	background: #F5F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+	border: 1px solid #4800FF80;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+.scrollbar2 {
+	float: left;
+	height: 700px;
+	width: 800px;
+	background: #F5F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+	border: 1px solid #4800FF80;
+}
