@@ -102,8 +102,9 @@ if(isset($_POST['btnChange']))
 	
 
 </nav>
-	<script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="public/bootstrap/js/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
+
 	<script type="text/javascript" src="./public/js/script.js"></script>
 </body>
 </html>
