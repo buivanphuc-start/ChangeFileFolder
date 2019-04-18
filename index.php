@@ -110,7 +110,7 @@ if(isset($_POST['btnRemove'])) {
 						</form>	
 					</div>
 					<div class="removeAll">
-						<form action="index.php" method="POST" id="formRemoveAll" role="form">
+						<form action="index.php" method="POST" id="formRemoveAll" role="form" onsubmit="return validateForm()">
 							<legend>You choose to delete</legend>
 							<div class="form-group">
 								<label for="">Delete this file or folder</label>
@@ -143,6 +143,6 @@ if(isset($_POST['btnRemove'])) {
 </nav>
 	<script type="text/javascript" src="public/bootstrap/js/jquery-3.4.0.min.js"></script>
 	<script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./public/js/script.js"></script>
+	<script type="text/javascript" src="./public/js/scripts.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('.control').css('display','none');
 	$('.formChange').css('display','none');
 	$('.removeAll').css('display','none');
@@ -52,6 +53,7 @@ function ChangeClick() {
 	$('.removeAll').css('display','none');
 	$('#btnDeleteClick').css('display','block');
 	$('#btnChangeClick').css('display','none');
+	$('.table').css('display','block');
 }
 
 function DeleteClick() {
@@ -59,5 +61,21 @@ function DeleteClick() {
 	$('.removeAll').css('display','block');
 	$('#btnDeleteClick').css('display','none');
 	$('#btnChangeClick').css('display','block');
+	$('.table').css('display','none');
 }
 
+function validateForm() {
+	var test = confirm('Cảnh báo !!! Bạn có chắc muốn xóa không ?');
+	if(test)
+	{
+		alert('Chúc mừng bạn đã xóa thành công các file hoặc folder');
+		return true;
+	}
+	else
+	{
+
+		return false;
+	}
+	
+	return false;
+}
