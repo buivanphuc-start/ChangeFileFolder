@@ -5,8 +5,9 @@ class Resource
 	public function isFolder($dir, $entry)
 	{
 		
-			echo '<li><button type="button" id="btnName" class="btn btn-default"><i class="fas fa-chevron-right"></i></button><i class="fas fa-folder"></i><a>'.$entry.'</a></li>';
-
+			echo '<li><i class="fas fa-folder"></i><a>'.$entry.'</a>
+					<input type="hidden" name="adressLink" id="adressLink" class="form-control" value="'.$dir.''.$entry.'">
+			</li>';
 
 			echo '<ul>';
 			if($handle = opendir($dir))
@@ -22,7 +23,12 @@ class Resource
 							}
 							else
 							{
-								echo '<li><i class="fas fa-file-alt"></i><a>'.$entry2.'</a></li>';
+								echo '<li>
+									<i class="fas fa-file-alt"></i>
+									<a>'.$entry2.'</a>
+										<input type="hidden" name="adressLink" id="adressLink" class="form-control" value="'.$dir2.'">
+								</li>';
+
 							}
 
 						}
@@ -32,6 +38,7 @@ class Resource
 			echo '</ul>';
 	}
 	public function dirToArray($oldName) {
+		
 		if($oldName)
 		{
 			$dir = str_replace(chr(92), chr(47), $oldName);
@@ -51,7 +58,10 @@ class Resource
 								}
 								else
 								{
-									echo '<li><i class="fas fa-file-alt"></i><a>'.$entry.'<a/></li>';
+									echo '<li><i class="fas fa-file-alt"></i><a>'.$entry.'<a/>
+										<input type="hidden" name="adressLink" id="adressLink" class="form-control" value="'.$dir2.'">
+									</li>';
+									
 								}
 
 							}
@@ -112,5 +122,23 @@ class Resource
 		 closedir($handle);
 	}
 
+	public function rmdir_recurse($path) {
+		  $path = rtrim($path, '/') . '/';
+		  $handle = opendir($path);
+
+		  while (false !== ($file = readdir($handle))) {
+		    if($file != '.' and $file != '..' ) {
+		      $fullpath = $path.$file;
+		      if (is_dir($fullpath)){
+		      	 rmdir_recurse($fullpath);
+		      }
+		      else {
+		      	unlink($fullpath);
+		      }
+		    }
+		  }
+		  closedir($handle);
+		  rmdir($path);
+	}
 
 }

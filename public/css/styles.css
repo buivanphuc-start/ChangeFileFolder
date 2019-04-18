@@ -1,37 +1,53 @@
+body {
+	background-image: url(../image/pexels-photo.jpeg);
+	background-repeat: repeat;
+	background-attachment:fixed;
+}
 .header{
 	text-align: center;
 	padding: 20px;
+	
+}
+input {
 
 }
 .header h1 {
-	background: #f4f4f4;
 	padding: 10px;
-	color: #48009CFF;
+	color: #fff;
+	font-weight: bold;
+	background-color: #40404080;
+}
+.background-nav {
+	background-color: #fff;
+	padding-top: 20px;
 }
 .formSearch {
-	padding-left: 50px;
+}
+.formSearch legend {
+	color: #0026FFFF;
+	border: none;
+
 }
 .formSearch .form-group {
-	margin-left: 50px;
+
 	display: inline-block;
-	float:left;
 }
 .formSearch .form-group input {
-	border-radius: 25px 0 0 25px;
+	background: #808080FF;
+	color:#fff;
 }
 .formSearch form button {
 	display: inline-block;
-	float: left;
-	border-radius: 0  25px 25px 0;
 }
-.formChange {
-	
+.formSearch form button:hover {
+	background: #02ECFCFF;
+	border:none;
 
 }
 .formChange .form-group input {
-	width: 80%;
 	margin-bottom: 20px;
-
+	background: #808080FF;
+	color:#fff;
 }
 .formChange .form-group #newName {
 	
@@ -39,15 +55,19 @@
 .formChange button {
 	display: none;
 }
-.table {
-	border-left: 2px solid #000;
 
+.table .ul {
+	padding-right: 20px;
+	
+	border: 1px solid #0AC0F4FF;
+	background: #fff;
+	opacity: 0.9;
 }
-
 .table ul {
 	/*border-left: 2px solid #0026FFFF;*/
 	margin-top: 25px;
 	list-style: none;
+
 }
 .table ul button {
 	border: none;
@@ -60,7 +80,7 @@
 	margin-top: 10px;
 }
 .table ul li a {
-
+	
 	cursor: pointer;
 	color: #0020FFFF !important;
 }
@@ -88,12 +108,3 @@
 	min-height: 450px;
 }
 
-.scrollbar2 {
-	float: left;
-	height: 700px;
-	width: 800px;
-	background: #F5F5F5F5;
-	overflow-y: scroll;
-	margin-bottom: 25px;
-	border: 1px solid #4800FF80;
-}
