@@ -1,5 +1,5 @@
 body {
-	background-image: url(../image/pexels-photo.jpeg);
+	background-image: url(../image/pexel-photo.jpeg);
 	background-repeat: repeat;
 	background-attachment:fixed;
 }
@@ -14,17 +14,22 @@ input {
 .header h1 {
 	padding: 10px;
 	color: #fff;
+	font-size: 4em;
 	font-weight: bold;
 	background-color: #40404080;
 }
 .background-nav {
-	background-color: #fff;
+	background-color: #0026FF80;
 	padding-top: 20px;
+
 }
 .formSearch {
 }
-.formSearch legend {
-	color: #0026FFFF;
+span {
+	color: #fff;
+}
+legend {
+	color: #FFFFFFFF;
 	border: none;
 
 }
@@ -108,3 +113,19 @@ input {
 	min-height: 450px;
 }
 
+#formRemoveAll .form-group {
+	display: inline-block;
+}
+#formRemoveAll .form-group label {
+	color: #fff;
+}
+.control .ask span {
+	float: left;
+	font-weight: bold;
+
+}
+.control .ask button {
+	display: inline-block;
+	float: left;
+	margin: 0 10px;
+} 

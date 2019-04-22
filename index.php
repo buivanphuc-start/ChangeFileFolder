@@ -43,7 +43,7 @@ if(isset($_POST['btnRemove'])) {
 	<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/fontawesome/css/all.css">
 
-	<link rel="stylesheet" type="text/css" href="public/css/styles.css" >
+	<link rel="stylesheet" type="text/css" href="public/css/style.css" >
 
 
 
@@ -92,9 +92,11 @@ if(isset($_POST['btnRemove'])) {
 						class="btn btn-primary" 
 						onClick="DeleteClick()"
 						id="btnDeleteClick"
-						>Delete</button>
+						> Delete</button>
 
 						<span>?</span>
+						<br>
+						<br>
 						
 					</div>
 					<div class="formChange">
@@ -106,14 +108,14 @@ if(isset($_POST['btnRemove'])) {
 								<input  type="hidden" class="form-control" id="links" name="links" value="<?php echo $dir ?>">
 							</div>
 
-							<button type="submit" id="btnChange" name='btnChange' class="btn btn-primary" >Change</button>
+							<button type="submit" id="btnChange" name='btnChange' class="btn btn-warning" >Change</button>
 						</form>	
 					</div>
 					<div class="removeAll">
 						<form action="index.php" method="POST" id="formRemoveAll" role="form" onsubmit="return validateForm()">
 							<legend>You choose to delete</legend>
 							<div class="form-group">
-								<label for="">Delete this file or folder</label>
+								<label for="removeAll">Delete this </label>
 								<input type="text" class="form-control" name="removeAll" value="<?php echo $dir ?>">
 							</div>
 							<button type="submit" name="btnRemove" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i>Delete</button>
