@@ -1,5 +1,5 @@
 body {
-	background-image: url(../image/pexel-photo.jpeg);
+	background-image: url(../image/pexels-photo.jpeg);
 	background-repeat: repeat;
 	background-attachment:fixed;
 }
@@ -19,7 +19,7 @@ input {
 	background-color: #40404080;
 }
 .background-nav {
-	background-color: #0026FF80;
+	background-color: #00000080;
 	padding-top: 20px;
 
 }
@@ -36,17 +36,23 @@ legend {
 .formSearch .form-group {
 
 	display: inline-block;
+	float: left;
 }
 .formSearch .form-group input {
 	background: #808080FF;
 	color:#fff;
+	display: inline-block;
+	border-radius: 0;
 }
 .formSearch form button {
+	background: #337AB7;
+	border:2px solid #337AB7;
 	display: inline-block;
+	float: left;
 }
 .formSearch form button:hover {
 	background: #02ECFCFF;
-	border:none;
+	border:2px solid #02ECFCFF;
 
 }
 .formChange .form-group input {
@@ -129,3 +135,13 @@ legend {
 	float: left;
 	margin: 0 10px;
 } 
+
+
+#btnSearch {
+	border-radius: 0;
+}
+
+#btnReset {
+	border-left: 1px solid #000;
+	border-radius: 0 25px 25px 0;
+}

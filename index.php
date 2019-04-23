@@ -43,7 +43,7 @@ if(isset($_POST['btnRemove'])) {
 	<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/fontawesome/css/all.css">
 
-	<link rel="stylesheet" type="text/css" href="public/css/style.css" >
+	<link rel="stylesheet" type="text/css" href="public/css/styles.css" >
 
 
 
@@ -69,7 +69,8 @@ if(isset($_POST['btnRemove'])) {
 						<div class="form-group">
 							<input type="text" class="form-control" id="link" name="links" placeholder="Enter the address link">
 						</div>
-						<button type="submit" name="btnSearch" class="btn btn-primary" onClick="onClickSearch()">Search</button>
+						<button type="submit" name="btnSearch" id="btnSearch"  class="btn btn-primary" onClick="onClickSearch()"><i class="fas fa-search"></i></button>
+						<button type="reset" name="btnReset" id="btnReset" class="btn btn-primary" onClick="onClickSearch()"><i class="fas fa-broom"></i></button>
 					</form>	
 				</div>				
 			</div>
