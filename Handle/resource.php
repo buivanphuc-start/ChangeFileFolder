@@ -56,6 +56,7 @@ class Resource
 									$this->isFolder($dir2, $entry);
 
 								}
+								
 								else
 								{
 									echo '<li><i class="fas fa-file-alt"></i><a>'.$entry.'<a/>

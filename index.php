@@ -101,7 +101,7 @@ if(isset($_POST['btnRemove'])) {
 						
 					</div>
 					<div class="formChange">
-						<form action="index.php" method="POST" id="formRename" role="form" >
+						<form action="index.php" method="POST" id="formRename" role="form" onsubmit="return changeForm()">
 							<legend>Change a new name</legend>
 							<div class="form-group">
 								<input type="text" class="form-control" name="oldName" id="oldName" placeholder="Enter the name to change">
@@ -113,7 +113,7 @@ if(isset($_POST['btnRemove'])) {
 						</form>	
 					</div>
 					<div class="removeAll">
-						<form action="index.php" method="POST" id="formRemoveAll" role="form" onsubmit="return validateForm()">
+						<form action="index.php" method="POST" id="formRemoveAll" role="form" onsubmit="return deleteForm()">
 							<legend>You choose to delete</legend>
 							<div class="form-group">
 								<label for="removeAll">Delete this </label>
