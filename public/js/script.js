@@ -72,7 +72,10 @@ function DeleteClick() {
 }
 
 function deleteForm() {
-	var test = confirm('Cảnh báo !!! Bạn có chắc muốn xóa không ?');
+	var test = confirm('Cảnh báo !!! Bạn có chắc muốn xóa không ?','Title', function() {
+		$('.btn-no').text('No');
+      $('.btn-yes').text('Yes');
+	});
 	if(test)
 	{
 		alert('Chúc mừng bạn đã xóa thành công các file hoặc folder');
