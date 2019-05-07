@@ -3,15 +3,6 @@ spl_autoload_register(function($class_name){
     require './Handle/'.$class_name.'.php';
 });
 
-// $data = array();
-// $data[] = 1;
-
-// $data[] = 2;
-
-// $data[1][] = 3;
-
-// $data[2][1][] = 4;
-// var_dump($data);
 $dir = null;
 $resource = new Resource();
 if(isset($_POST['btnSearch'])){
@@ -30,7 +21,10 @@ if(isset($_POST['btnChange']))
 
 
 if(isset($_POST['btnRemove'])) {
-	$resource->rmdir_recurse($_POST['removeAll']);
+	$deleteName = $_POST['deleteName'];
+	$links = $_POST['links'];
+	$resource->deleteName($links, $deleteName) ;
+	$dir = $_POST['links'];
 }
 
 
@@ -43,7 +37,7 @@ if(isset($_POST['btnRemove'])) {
 	<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="public/fontawesome/css/all.css">
 
-	<link rel="stylesheet" type="text/css" href="public/css/styles.css" >
+	<link rel="stylesheet" type="text/css" href="public/css/style.css" >
 
 
 
@@ -76,9 +70,17 @@ if(isset($_POST['btnRemove'])) {
 			</div>
 			
 			<div class="col-md-6">
+				<div class="setData">
+						<label>
+							Name selected 
+						</label>
+					<input type="text" class="form-control" name="nameChoose" id="nameChoose" placeholder="choose a name">
+											<br>
+						<br>
+				</div>
 				<div class="control">
 					<div class="ask">
-						<span>Would you like to choose</span>
+						<span>what do you choose ?</span>
 
 						<button 
 						type="button" 
@@ -95,16 +97,18 @@ if(isset($_POST['btnRemove'])) {
 						id="btnDeleteClick"
 						> Delete</button>
 
-						<span>?</span>
+						
 						<br>
 						<br>
+	
 						
 					</div>
+
 					<div class="formChange">
 						<form action="index.php" method="POST" id="formRename" role="form" onsubmit="return changeForm()">
-							<legend>Change a new name</legend>
+							<legend>You choose to change the name</legend>
 							<div class="form-group">
-								<input type="text" class="form-control" name="oldName" id="oldName" placeholder="Enter the name to change">
+								<input type="hidden" class="form-control" name="oldName" id="oldName">
 								<input type="text" class="form-control" name="newName" id="newName" placeholder="Enter a new name" onkeyup="onShowButton()">
 								<input  type="hidden" class="form-control" id="links" name="links" value="<?php echo $dir ?>">
 							</div>
@@ -116,9 +120,9 @@ if(isset($_POST['btnRemove'])) {
 						<form action="index.php" method="POST" id="formRemoveAll" role="form" onsubmit="return deleteForm()">
 							<legend>You choose to delete</legend>
 							<div class="form-group">
-								<label for="removeAll">Delete this </label>
-								<input type="text" class="form-control" name="removeAll" value="<?php echo $dir ?>">
+								<input type="hidden" class="form-control" name="deleteName" id="deleteName">
 							</div>
+							<input  type="hidden" class="form-control" id="links" name="links" value="<?php echo $dir ?>">
 							<button type="submit" name="btnRemove" class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i>Delete</button>
 						</form>
 					</div>
@@ -146,6 +150,8 @@ if(isset($_POST['btnRemove'])) {
 </nav>
 	<script type="text/javascript" src="public/bootstrap/js/jquery-3.4.0.min.js"></script>
 	<script type="text/javascript" src="public/bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./public/js/scripts.js"></script>
+	<script type="text/javascript" src="./public/js/script.js"></script>
 </body>
 </html>
+
+

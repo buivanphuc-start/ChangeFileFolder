@@ -1,14 +1,15 @@
 $(document).ready(function(){
-	$('.control').css('display','none');
+	$('.setData').css('display','none');
+	$('.ask').css('display','none');
 	$('.formChange').css('display','none');
 	$('.removeAll').css('display','none');
-
-	$('a').click(function(){
-		$('.formChange').css('display','block');
+	$('a').click(function(e){
+		// $('.formChange').css('display','block');
 		var a = $(this).html();
-		$('#oldName').attr('value',a);
-		$('.control').css('display','block');
-		$('#btnChangeClick').css('display','none');
+
+		$('#nameChoose').attr('value',a);
+		$('.setData').css('display','block');
+		$('.ask').css('display','block');
 	});
 
 
@@ -48,19 +49,26 @@ function onShowButton() {
 }
 
 function ChangeClick() {
-	$('.formChange').css('display','block');
-	$('.removeAll').css('display','none');
-	$('#btnDeleteClick').css('display','block');
-	$('#btnChangeClick').css('display','none');
-	$('.table').css('display','block');
+
+		var a = document.getElementById('nameChoose').value;
+		$('#oldName').attr('value',a);
+
+		$('.formChange').css('display','block');
+		$('.removeAll').css('display','none');
+
+		$('#btnChangeClick').css('display','none');
+		$('#btnDeleteClick').css('display','block');
 }
 
 function DeleteClick() {
-	$('.formChange').css('display','none');
-	$('.removeAll').css('display','block');
-	$('#btnDeleteClick').css('display','none');
-	$('#btnChangeClick').css('display','block');
-	$('.table').css('display','none');
+		var a = document.getElementById('nameChoose').value;
+		$('#deleteName').attr('value',a);
+
+
+		$('.formChange').css('display','none');
+		$('.removeAll').css('display','block');
+		$('#btnDeleteClick').css('display','none');
+		$('#btnChangeClick').css('display','block');
 }
 
 function deleteForm() {

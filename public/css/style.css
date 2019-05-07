@@ -12,11 +12,13 @@ input {
 
 }
 .header h1 {
+
 	padding: 10px;
 	color: #fff;
 	font-size: 4em;
 	font-weight: bold;
 	background-color: #40404080;
+	
 }
 .background-nav {
 	background-color: #00000080;
@@ -144,4 +146,11 @@ legend {
 #btnReset {
 	border-left: 1px solid #000;
 	border-radius: 0 25px 25px 0;
+}
+.control .ask .radio {
+	
+}
+
+.setData label {
+	color: #fff;
 }
